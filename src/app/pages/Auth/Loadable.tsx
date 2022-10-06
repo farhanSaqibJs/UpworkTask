@@ -1,6 +1,6 @@
 import { lazyLoad } from 'utils/loadable';
 
-export const Registration = lazyLoad(
+export const Register = lazyLoad(
   () => import('./register'),
   module => module.Register,
 );

@@ -69,7 +69,9 @@ export function Login(props) {
                                             Submit
                                         </Button>
                                     </Form.Item>
-
+                                    <div style={{textTransform: 'uppercase', marginTop: '50px', textAlign: 'center'}}>
+                                        <Link to="./login">Login now!</Link>
+                                    </div>
                                 </Form>
                             </Card>
                         </Col>

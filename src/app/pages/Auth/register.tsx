@@ -12,7 +12,7 @@ const validator = {
   }
 };
 
-export function Register(props) {
+export function Register() {
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
   };
@@ -160,7 +160,6 @@ export function Register(props) {
                     <Button
                       block
                       type="ghost"
-                      htmlType=""
                       className="login-form-button"
                     >
                       Select other plan
@@ -168,7 +167,7 @@ export function Register(props) {
                   </Form.Item>
 
                   <div style={{textTransform: 'uppercase', marginTop: '50px', textAlign: 'center'}}>
-                    <Link to="./register">register now!</Link>
+                    <Link to="./login">Login now!</Link>
                   </div>
                 </Form>
               </Card>
