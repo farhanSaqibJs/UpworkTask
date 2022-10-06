@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout1 from '../../components/Layout1';
-import {Button, Card, Checkbox, Col, Form, Input, Row} from 'antd';
+import {Button, Card, Col, Form, Row} from 'antd';
 import FloatInput from "../../components/FloatInput";
 import {Link} from 'react-router-dom';
 import './style.less'
@@ -12,7 +12,7 @@ const validator = {
     }
 };
 
-export function Login(props) {
+export function Login() {
     const onFinish = (values: any) => {
         console.log('Received values of form: ', values);
     };
@@ -50,7 +50,7 @@ export function Login(props) {
                                     </Form.Item>
                                     <Form.Item name="email" rules={[validator.require]} hasFeedback>
                                         <FloatInput
-                                            label="Passowrd"
+                                            label="Password"
                                             name="password"
                                             placeholder="Password"
                                             rules={[
@@ -70,7 +70,7 @@ export function Login(props) {
                                         </Button>
                                     </Form.Item>
                                     <div style={{textTransform: 'uppercase', marginTop: '50px', textAlign: 'center'}}>
-                                        <Link to="./login">Login now!</Link>
+                                        <Link to="./register">Register now!</Link>
                                     </div>
                                 </Form>
                             </Card>
