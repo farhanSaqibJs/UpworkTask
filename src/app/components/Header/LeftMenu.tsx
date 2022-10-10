@@ -23,7 +23,7 @@ class LeftMenu extends Component {
           <Link to={'/plans'}> Become a partner </Link>
         </Menu.Item>
           <Menu.Item>
-          <Link to={'/login'}> Login </Link>
+          <Link className={"loginBtn"} to={'/login'}> Login </Link>
         </Menu.Item>
       </Menu>
     );

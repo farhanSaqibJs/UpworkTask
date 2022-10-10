@@ -4,7 +4,7 @@
 .navBarInner {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
 }
 
 .logo {
@@ -21,13 +21,6 @@
   text-transform: capitalize;
 }
 
-.menuCon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
-}
-
 .menuCon .ant-menu-item {
   padding: 0 5px;
 }
@@ -38,19 +31,27 @@
 
 .menuCon .ant-menu-item a,
 .menuCon .ant-menu-submenu-title a {
-  padding: 10px 15px;
+  padding: 6px 15px;
 }
 
 .menuCon .ant-menu-horizontal {
   border-bottom: none;
 }
 
-.menuCon .leftMenu {
-  flex-grow: unset;
-}
-
-.menuCon .rightMenu {
-  flex-grow: 1;
+.menuCon{
+  width: calc(100% - 200px);
+  .leftMenu {
+    ul {
+      margin-left: auto;
+      display: flex;
+      justify-content: end;
+      li {
+        a {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 
 .barsMenu {
@@ -119,7 +120,7 @@
   }
 
   .menuCon {
-    justify-content: flex-end;
+
   }
 
   .menuCon .ant-menu-item,
@@ -134,11 +135,11 @@
 }
 
 @media (min-width: 767px) {
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+    padding: 0;
+  }
   .logo h3, .logo h3 a {
     color: #fff;
-  }
-  .menuCon {display: flex;
-    justify-content: flex-end;
   }
   .menuBar {
     background: #0D0D0D;
@@ -164,5 +165,12 @@
   .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected:after,
   .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover:after {
     border-bottom: 2px solid #fff !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .menuCon {
+    display: flex;
+    justify-content: end;
   }
 }

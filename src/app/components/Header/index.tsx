@@ -39,9 +39,6 @@ class MainHeader extends Component {
                                     <div className="leftMenu">
                                         <LeftMenu/>
                                     </div>
-                                    <div className="rightMenu">
-                                        {/*<RightMenu />*/}
-                                    </div>
                                     <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
                                         {/*<span className="barsBtn">*/}
                                         {/*    */}
