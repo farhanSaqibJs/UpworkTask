@@ -15,7 +15,7 @@ export function Layout1(props) {
                     <Content className="site-layout" style={{paddingTop: 60}}>
                         <section
                             className="childWrapper"
-                            style={{padding: 24, background: "transparent"}}
+                            style={{ background: "transparent"}}
                         >
                             {props.children}
                         </section>
