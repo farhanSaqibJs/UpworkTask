@@ -10,7 +10,7 @@ export function Layout1(props) {
     return (
         <>
             <Layout style={{ position: 'relative' }}>
-                <div style={{backgroundImage: `url(./background.jpg)`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+                <div style={{backgroundImage: `url(./background.jpg)`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundColor:' #000'}}>
                     <MainHeader/>
                     <Content className="site-layout" style={{paddingTop: 60}}>
                         <section
