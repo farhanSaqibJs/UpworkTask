@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout1 from '../../components/Layout1';
-import {Button, Card, Checkbox, Col, Form, Input, Row} from 'antd';
+import {Button, Card, Col, Form, Row} from 'antd';
 import FloatInput from "../../components/FloatInput";
 import {Link} from 'react-router-dom';
 import './style.less'
+import PaymentCard from "../../components/paymentCard";
 
 const validator = {
   require: {
@@ -21,7 +22,7 @@ export function Register() {
       <Layout1>
         <div className="container">
           <Row justify={'start'} align={'middle'} className={'heroPageHeight'}>
-            <Col xs={24} md={12} lg={8} xl={8} xxl={7}>
+            <Col xs={24} md={24} lg={12} xl={8} xxl={7}>
               <Row justify={'center'} style={{marginTop: '30px'}}>
                 <Col>
                   <div className="sectionTitle">
@@ -171,6 +172,11 @@ export function Register() {
                   </div>
                 </Form>
               </Card>
+            </Col>
+            <Col xs={24} md={24} lg={12} xl={8} xxl={10}>
+              <Row className="cardGrid">
+                <PaymentCard />
+              </Row>
             </Col>
           </Row>
         </div>

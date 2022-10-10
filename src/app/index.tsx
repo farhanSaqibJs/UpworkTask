@@ -7,38 +7,39 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import {Helmet} from 'react-helmet-async';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
 
-import { GlobalStyle } from 'styles/global-styles';
+import {GlobalStyle} from 'styles/global-styles';
 
-import { NotFoundPage } from './components/NotFoundPage/Loadable';
-import { useTranslation } from 'react-i18next';
+import {NotFoundPage} from './components/NotFoundPage/Loadable';
+import {useTranslation} from 'react-i18next';
 import {Login, Plans, Register} from './pages/Auth/Loadable';
-import { HomePage } from './pages/HomePage/Loadable';
 
 export function App() {
-  const { i18n } = useTranslation();
-  return (
-    <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - by Raghad"
-        defaultTitle="by Raghad"
-        htmlAttributes={{ lang: i18n.language }}
-      >
-        <meta name="description" content="A by Raghad application" />
-      </Helmet>
+    const {i18n} = useTranslation();
+    return (
+        <BrowserRouter>
+            <Helmet
+                titleTemplate="%s - by Raghad"
+                defaultTitle="by Raghad"
+                htmlAttributes={{lang: i18n.language}}
+            >
+                <meta name="description" content="A by Raghad application"/>
+                <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-      <Switch>
-        <Route exact path="/" component={HomePage} />
 
-        <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
-        <Route path="/plans" component={Plans} />
+            </Helmet>
 
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </BrowserRouter>
-  );
+            <Switch>
+
+                <Route path="/" component={Register}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/plans" component={Plans}/>
+
+                <Route component={NotFoundPage}/>
+            </Switch>
+            <GlobalStyle/>
+        </BrowserRouter>
+    );
 }
