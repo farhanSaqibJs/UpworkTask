@@ -168,7 +168,7 @@ export function Register() {
                   </Form.Item>
 
                   <div style={{textTransform: 'uppercase', marginTop: '50px', textAlign: 'center'}}>
-                    <Link to="./login">Login now!</Link>
+                    <Link to="./login">I have an account</Link>
                   </div>
                 </Form>
               </Card>

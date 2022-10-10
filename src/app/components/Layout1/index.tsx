@@ -9,7 +9,7 @@ const {Content} = Layout;
 export function Layout1(props) {
     return (
         <>
-            <Layout>
+            <Layout style={{ position: 'relative' }}>
                 <div style={{backgroundImage: `url(./background.jpg)`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
                     <MainHeader/>
                     <Content className="site-layout" style={{paddingTop: 60}}>
@@ -18,6 +18,10 @@ export function Layout1(props) {
                             style={{ background: "transparent"}}
                         >
                             {props.children}
+
+                            <div className="chatBot">
+                                <img src="./chatIcon.png" alt="chatIcon.png"/>
+                            </div>
                         </section>
                     </Content>
                 </div>
