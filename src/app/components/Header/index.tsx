@@ -3,13 +3,15 @@ import LeftMenu from './LeftMenu';
 import {Drawer, Button, Col, Row} from 'antd';
 
 import './style.less';
+import {AlignCenterOutlined} from "@ant-design/icons";
 
 class MainHeader extends Component {
     state = {
         current: 'mail',
         visible: false,
     };
-    showDrawer = () => {
+    showDrawer = (e) => {
+        e.preventDefault();
         this.setState({
             visible: true,
         });
@@ -29,7 +31,7 @@ class MainHeader extends Component {
                         <Col span={24}>
                             <div className="navBarInner">
                                 <div className="logo">
-                                    <a href="">
+                                    <a href="./">
                                         <img src="./Logo.png" alt=""/>
                                     </a>
                                 </div>
@@ -41,14 +43,18 @@ class MainHeader extends Component {
                                         {/*<RightMenu />*/}
                                     </div>
                                     <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
-                                        <span className="barsBtn"></span>
+                                        {/*<span className="barsBtn">*/}
+                                        {/*    */}
+                                        {/*</span>*/}
+                                        <AlignCenterOutlined color={"#25AB75"} />
                                     </Button>
                                     <Drawer
-                                        title="Basic Drawer"
+                                        title="LM Fitness"
                                         placement="right"
                                         closable={false}
                                         onClose={this.onClose}
                                         visible={this.state.visible}
+                                        maskClosable={true}
                                     >
                                         <LeftMenu/>
                                         {/*<RightMenu />*/}

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Menu } from 'antd';
+import { Menu} from 'antd';
 import { Link } from 'react-router-dom';
 import './style.less';
 
 class LeftMenu extends Component {
   render() {
     return (
-      <Menu mode={'horizontal'}>
+      <Menu mode={'horizontal'} title={"Menu"}>
         <Menu.Item>
           <Link to={'/plans'}> About </Link>
         </Menu.Item>
