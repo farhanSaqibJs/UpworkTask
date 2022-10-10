@@ -10,10 +10,5 @@ export const Login = lazyLoad(
   module => module.Login,
 );
 
-export const Plans = lazyLoad(
-  () => import('./plans'),
-  module => module.Plans,
-);
-
 
 

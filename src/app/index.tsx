@@ -14,7 +14,9 @@ import {GlobalStyle} from 'styles/global-styles';
 
 import {NotFoundPage} from './components/NotFoundPage/Loadable';
 import {useTranslation} from 'react-i18next';
-import {Login, Plans, Register} from './pages/Auth/Loadable';
+import {Login, Register} from './pages/Auth/Loadable';
+import {AllPlans} from "./pages/AllPlans/Loadable";
+import {HomePage} from "./pages/HomePage/Loadable";
 
 export function App() {
     const {i18n} = useTranslation();
@@ -33,10 +35,11 @@ export function App() {
 
             <Switch>
 
-                <Route path="/" component={Register}/>
+                <Route path="/register" component={Register}/>
                 <Route path="/login" component={Login}/>
-                <Route path="/plans" component={Plans}/>
+                <Route path="/plans" component={AllPlans}/>
 
+                <Route path="/" component={HomePage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
             <GlobalStyle/>
