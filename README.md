@@ -1,6 +1,6 @@
 # UpworkTask
 
-git clone --depth 1 https://github.com/farhanSaqibJs/UpworkTask.git
+git clone https://github.com/farhanSaqibJs/UpworkTask.git
 
 ```bash
 cd UpworkTask
